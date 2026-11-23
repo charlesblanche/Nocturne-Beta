@@ -1,4 +1,4 @@
-const CACHE='nocturne-v3.4-shell-2026-11-22';
+const CACHE='nocturne-v3.5-shell-2026-11-23';
 const ASSETS=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));
