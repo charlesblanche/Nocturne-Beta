@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0b101b"><meta name="app-version" content="3.5.0"><meta name="description" content="Nocturne — unofficial Dungeon World 2 Beta v3 character builder and keeper. Nine classes, rules-driven creation, resource recovery, extensible effect builders, encounter tools and GM mode."><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="manifest" href="./manifest.webmanifest"><title>Nocturne · DW2 Character & GM Manager</title><style>:root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark;--bg:#0b101b;--surface:#141a29;--raised:#1b2232;--highlight:#262e42;--border:#303a50;--text:#f2f4ff;--muted:#a6afc8;--dim:#7f89a3;--violet:#b4a2fd;--violetDark:#7065ce;--green:#75d6ba;--red:#f1a2b7;--gold:#f7d6a0;--shadow:0 16px 50px #02050a55}
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0b101b"><meta name="app-version" content="3.6.0"><meta name="description" content="Nocturne — unofficial Dungeon World 2 Beta v3 character builder and keeper. Nine classes, rules-driven creation, resource recovery, extensible effect builders, encounter tools and GM mode."><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="manifest" href="./manifest.webmanifest"><title>Nocturne · DW2 Character & GM Manager</title><style>:root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark;--bg:#0b101b;--surface:#141a29;--raised:#1b2232;--highlight:#262e42;--border:#303a50;--text:#f2f4ff;--muted:#a6afc8;--dim:#7f89a3;--violet:#b4a2fd;--violetDark:#7065ce;--green:#75d6ba;--red:#f1a2b7;--gold:#f7d6a0;--shadow:0 16px 50px #02050a55}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100dvh;background:radial-gradient(ellipse at 85% -16%,#7163b329,transparent 45%),var(--bg);color:var(--text)}button,input,textarea,select{font:inherit;color:inherit}button{cursor:pointer}button:disabled{opacity:.43;cursor:not-allowed}input,textarea,select{color-scheme:dark}a{color:var(--violet)}.app{display:grid;grid-template-columns:254px 1fr;min-height:100dvh}.side{background:#0f1522e8;border-right:1px solid var(--border);height:100dvh;position:sticky;top:0;padding:22px 14px;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:11px;padding:4px 9px 23px}.sigil{width:42px;height:42px;border-radius:13px;border:1px solid #7867c4;background:linear-gradient(145deg,#60519a,#27243c);display:grid;place-items:center;font-family:Georgia,serif;color:#d5caff;font-size:30px}.brand strong{font-size:16px;letter-spacing:.14em}.brand small{display:block;color:var(--dim);font-size:10px;margin-top:3px;letter-spacing:.06em}.navlist{display:grid;gap:5px}.navbutton{background:transparent;border:0;color:#b8c0d7;text-align:left;padding:12px 11px;border-radius:9px;font-size:13px;display:flex;align-items:center;gap:11px;width:100%}.navbutton .glyph{font-size:16px;width:20px;text-align:center}.navbutton:hover{background:#242e43}.navbutton.current{color:#fff;background:#2b2a47;border-left:3px solid var(--violet)}.sidefoot{font-size:11px;color:var(--dim);line-height:1.6;margin-top:auto;border-top:1px solid var(--border);padding:15px 9px 0}.stage{min-width:0}.top{position:sticky;top:0;z-index:7;padding:16px clamp(16px,3vw,34px);background:#101726e8;backdrop-filter:blur(15px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:14px}.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:.15em;color:var(--violet)}.pagetitle{font:normal 27px/1.15 Georgia,serif;margin:6px 0 0}.topactions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.content{max-width:1370px;padding:25px clamp(16px,3vw,34px) 115px;margin:auto}.hero{border:1px solid #574e7d;border-radius:20px;padding:24px;background:linear-gradient(120deg,#312b50,#1b2233 56%,#181c2c);margin-bottom:18px;display:flex;gap:20px;justify-content:space-between;align-items:center}.hero h2{font:normal clamp(28px,3vw,42px)/1.1 Georgia,serif;margin:8px 0}.hero p{color:#bfc6db;font-size:13px;line-height:1.6;max-width:660px;margin:7px 0 0}.muted{color:var(--muted)}.small{font-size:12px;line-height:1.55}.tiny{font-size:10px;color:var(--muted);line-height:1.5}.pill{font-size:10px;border-radius:99px;padding:5px 10px;border:1px solid #6d649b;background:#3d355d;color:#e4d9ff;font-weight:600;white-space:nowrap}.pill.green{border-color:#3b857a;color:#a7eadb;background:#1f3d3a}.pill.red{border-color:#a25f6e;color:#ffd0d8;background:#452a35}.pill.gold{border-color:#89704c;color:#ffdfac;background:#493b30}.btn{border:1px solid #565872;background:#30324b;border-radius:10px;padding:10px 14px;color:#f2eefe;font-size:12px;font-weight:650;line-height:1.2;min-height:36px}.btn:hover{background:#404260}.btn.primary{background:linear-gradient(110deg,#8775d9,#6555b1);border-color:#a99af6;color:white}.btn.primary:hover{filter:brightness(1.12)}.btn.quiet{background:transparent;border-color:#4b556e}.btn.danger{background:#442c3c;border-color:#9b586b;color:#ffc5d1}.btn.sm{padding:7px 10px;min-height:30px;font-size:11px}.btn.square{min-width:36px;padding:8px}.btn.block{width:100%}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.columns{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:15px}.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c9{grid-column:span 9}.c12{grid-column:span 12}.panel{background:linear-gradient(155deg,#1a2233,#151c2b);border:1px solid var(--border);border-radius:16px;padding:19px;min-width:0;box-shadow:var(--shadow)}.panel h3{font-size:14px;margin:0 0 13px}.panel .lede{color:var(--muted);font-size:12px;margin:0 0 12px;line-height:1.6}.panel + .panel{margin-top:0}.sectionhead{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:17px}.sectionhead h2{font:normal 26px Georgia,serif;margin:0}.sectionhead p{font-size:12px;color:var(--muted);margin:6px 0 0;max-width:740px;line-height:1.55}.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.row.start{align-items:flex-start}.stack{display:grid;gap:11px}.divider{height:1px;background:var(--border);margin:15px 0}.statset{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.stat{border-radius:11px;background:#252d41;border:1px solid #424a66;text-align:center;padding:12px 4px}.stat strong{display:block;font-size:26px;color:#e4d9ff;line-height:1.3}.stat span{font-size:10px;font-weight:600;color:#bfc6da;letter-spacing:.06em}.measure{font-size:29px;font-weight:750;font-variant-numeric:tabular-nums;letter-spacing:-.04em}.measure small{font-size:15px;color:var(--muted);font-weight:400}.progress{height:7px;border-radius:7px;background:#333a4d;overflow:hidden;margin:10px 0}.progress>i{display:block;height:100%;background:linear-gradient(90deg,#a38ef1,#e5bdfa);border-radius:7px}.progress.hp>i{background:linear-gradient(90deg,#ad5e83,#eaa3b5)}.condition-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.condition{background:#252b3d;border:1px solid #46516a;border-radius:10px;min-height:74px;padding:9px 3px;text-align:center}.condition b{display:block;font-size:10px;margin:5px 0 3px}.condition small{font-size:9px;color:var(--muted)}.condition.marked{background:#45323a;border-color:#bd8692}.condition.locked{background:#4c2c3b;border-color:#f2a1b6}.item{border:1px solid #3c475d;background:#222a3b;border-radius:12px;padding:14px}.item h4{font-size:13px;margin:0 0 6px}.item p{font-size:12px;line-height:1.55;color:#c3c9db;margin:7px 0}.item .meta{font-size:10px;color:#aeb7d2}.badgetext{font-size:10px;color:var(--violet);text-transform:uppercase;letter-spacing:.1em;font-weight:700}.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{font-size:10px;padding:5px 7px;border-radius:6px;background:#36324d;border:1px solid #625584;color:#e1d6fc}.chip.gray{background:#292f41;border-color:#515a70;color:#bdc5d9}.chip.green{background:#1e3d39;border-color:#4c8a7c;color:#9aead1}.chip.gold{background:#493c2e;border-color:#8e7650;color:#f5d6a6}.list{display:grid;gap:9px}.empty{border:1px dashed #4c5976;border-radius:12px;padding:24px;text-align:center;color:#aeb6ca;font-size:13px;line-height:1.7}.formfield{display:grid;gap:6px;min-width:0}.formfield label{font-size:11px;font-weight:700;color:#d2c9ea}.input{width:100%;min-height:40px;padding:10px 11px;background:#101626;border:1px solid #49536b;border-radius:10px;outline:0;font-size:13px}.input:focus{border-color:#a48ff5;box-shadow:0 0 0 2px #8168da44}.input.error{border-color:#f09aac}.input.area{min-height:86px;resize:vertical}.f2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.f3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.guide{background:#2b2942;border:1px solid #605489;border-radius:10px;padding:11px 12px;color:#d8d0ed;font-size:12px;line-height:1.65}.warning{background:#403128;border:1px solid #8d704c;color:#f7dbaa;border-radius:10px;padding:11px 12px;font-size:12px;line-height:1.65}.success{background:#1c3937;border:1px solid #548779;color:#bcf1df;border-radius:10px;padding:11px 12px;font-size:12px;line-height:1.65}.schoolgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.school{border:1px solid #4a526a;background:#242b40;border-radius:10px;padding:12px 10px;text-align:left;min-height:88px}.school b{display:block;font-size:12px}.school span{display:block;font-size:10px;line-height:1.45;color:#adb9d5;margin-top:6px}.school.on{background:#3e355c;border-color:#a58df7}.school.bonus{border-color:#549887;background:#1e3e3a}.tabs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:17px}.tab{border:1px solid #4d5970;border-radius:100px;padding:7px 12px;background:transparent;color:#c1cce3;font-size:11px}.tab.active{background:#393054;border-color:#9a84db;color:#fff}.modal-backdrop{position:fixed;inset:0;background:#060916e5;z-index:50;display:grid;place-items:center;padding:18px;overflow:auto}.modal{background:#181e2e;border:1px solid #75669d;border-radius:20px;width:min(800px,100%);max-height:min(93dvh,1000px);box-shadow:0 35px 90px #000b;overflow:auto;padding:24px}.modal.large{width:min(980px,100%)}.modalhead{display:flex;gap:20px;align-items:center;justify-content:space-between;margin-bottom:16px}.modalhead h2{font:normal 26px Georgia,serif;margin:0}.modalhead p{color:var(--muted);font-size:12px;margin:5px 0 0}.modalsteps{display:flex;gap:5px;margin:15px 0 22px}.modalsteps i{display:block;flex:1;height:5px;background:#364059;border-radius:8px}.modalsteps i.done{background:#9e89f4}.modalfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}.option{padding:13px;border:1px solid #4a526c;border-radius:12px;background:#232c3d;display:flex;align-items:flex-start;gap:10px;cursor:pointer}.option:has(input:checked){border-color:#a68ef3;background:#3b3356}.option input{accent-color:#a891f7;margin-top:3px}.option b{font-size:12px}.option small{color:var(--muted);font-size:11px;line-height:1.45;display:block;margin-top:4px}.options{display:grid;gap:8px}.options.two{grid-template-columns:repeat(2,minmax(0,1fr))}.dice{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.die{border:1px solid #60577f;border-radius:10px;background:#352e4c;padding:12px;text-align:center;font-size:19px;font-weight:700}.die.final{border-color:#a191e7;background:#45365f}.rollresult{border:1px solid #967eeb;background:linear-gradient(130deg,#403456,#25273c);border-radius:12px;padding:14px;font-size:12px;line-height:1.6}.rollresult strong{font-size:30px;color:#f4e9ff;display:block}.charge{width:26px;height:26px;border:1px solid #766a93;border-radius:7px;background:#36314a;color:#ddd2fc;padding:0}.charge.spent{background:#513342;color:#ffd1dd;border-color:#bd7b94}.right{margin-left:auto}.nowrap{white-space:nowrap}.mark{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px;background:#86d4b7}.mark.pending{background:#ebc78a}.tagline{font-size:13px;color:#c3c6d7;line-height:1.65}.exp{display:grid;gap:10px}.advrow{border-left:2px solid #8470c5;padding:6px 10px;font-size:12px;color:#c7c9de}.bottomnav{display:none}.toast{position:fixed;bottom:23px;right:24px;padding:11px 15px;background:#303a4f;border:1px solid #9785cb;border-radius:10px;font-size:12px;box-shadow:var(--shadow);z-index:60;max-width:340px}.linkbtn{background:none;border:0;color:var(--violet);font-size:12px;padding:0;text-decoration:underline}.screenonly{}[hidden]{display:none!important}
 @media(max-width:1100px){.c3{grid-column:span 6}.c4,.c5,.c6,.c7,.c8,.c9{grid-column:span 12}.schoolgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:780px){.app{display:block}.side{display:none}.top{position:relative;align-items:flex-start;flex-wrap:wrap;padding:15px}.pagetitle{font-size:23px}.topactions{width:100%}.content{padding:15px 13px 110px}.hero{padding:21px;flex-direction:column;align-items:flex-start}.hero h2{font-size:31px}.columns{gap:12px}.panel{padding:15px}.c3{grid-column:span 6}.bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20;padding:8px 7px calc(8px + env(safe-area-inset-bottom));background:#101525f3;border-top:1px solid #41485f;gap:3px;justify-content:space-between;backdrop-filter:blur(15px)}.bottomnav button{border:0;background:none;border-radius:9px;padding:6px 4px;color:#a9b5d1;font-size:10px;display:grid;gap:3px;place-items:center;min-width:0;flex:1}.bottomnav button strong{font-size:17px}.bottomnav button.current{background:#352e50;color:white}.modal-backdrop{padding:0;place-items:end center}.modal{width:100%;max-height:95dvh;border-radius:18px 18px 0 0;padding:20px 16px calc(20px + env(safe-area-inset-bottom))}.modalhead h2{font-size:23px}.options.two{grid-template-columns:1fr}.f3{grid-template-columns:1fr 1fr}}
@@ -1724,4 +1724,360 @@ if(type==='nf-wind-spend'){const cl=ND_st(c).special.elementalCloak;if(cl?.type=
 if(type==='nf-cloak-end'){delete ND_st(c).special.elementalCloak;save();render();}
 if(type==='nf-mirror-image'&&c&&NC_action){const k=NF_eligibleConditions(c)[0];if(!k){banner('No clear Condition can be marked.');return;}NR_condSet(c,k,1);NC_action.incomingDone=true;save();openModal('Mirror Image',`<div class="guide">Marked ${esc(k)} to avoid this attack's damage. You may reposition up to #near.</div><div class="actions">${btn('Continue','nc-damage-stage','primary')}${btn('Finish exchange','nc-attack-finish','quiet')}</div>`,true);}
 },true);
+</script><script>'use strict';
+/* Nocturne v3.6: structured equipment mechanics and acquisition details.
+   All new properties are optional: v3.5 characters and JSON backups remain readable. */
+const N36_VERSION='3.6.0';
+const N36_STATS=['STR','DEX','INT','WIS','CHA'];
+const N36_FACES=[2,3,4,6,8,10,12,20,100];
+const N36_WEALTH=[['','Not specified — GM decides'],['0','Broke'],['1','Poor'],['2','Modest'],['3','Comfortable'],['4','Rich'],['5','Aristocratic']];
+const N36_ACQUIRE=[['starting','Starting class equipment'],['purchase','Purchased from a merchant'],['reward','Loot / quest reward'],['crafted','Crafted or commissioned'],['gm','GM approval / special source']];
+const N36_WEAPON_EFFECTS={
+ attack_stat:['Attack uses attribute','stat','Override the attack attribute for this weapon'],
+ attack_stat_option:['Additional attack attribute','stat','Adds another legal attribute choice'],
+ attack_bonus:['Attack roll bonus','number','Adds to Trade Blows made using this weapon'],
+ attack_adv:['Attack advantage','none','Gives advantage to Trade Blows with this weapon'],
+ attack_dis:['Attack disadvantage','none','Gives disadvantage to Trade Blows with this weapon'],
+ damage_flat:['Damage bonus','number','Adds to this weapon’s damage only'],
+ damage_die:['Additional damage dice','dice','Rolls extra dice when this weapon deals damage'],
+ damage_override:['Replace weapon damage dice','dice','Uses these damage dice instead of the base dice'],
+ damage_adv:['Damage advantage','none','Roll weapon damage with advantage'],
+ damage_dis:['Damage disadvantage','none','Roll weapon damage with disadvantage'],
+ tag:['Grant weapon tag','tag','Applies a weapon tag to this weapon'],
+ remove_tag:['Remove weapon tag','tag','Suppresses a tag on this weapon'],
+ armor_bonus:['Armor while wielded','number','Adds armor while this weapon is equipped'],
+ move_bonus:['Move bonus while wielded','number','Adds to all Move rolls while this weapon is equipped'],
+ stat_bonus:['Attribute bonus while wielded','statNumber','Adds to the selected attribute while equipped'],
+ max_hp_bonus:['Max HP while wielded','number','Adds to maximum HP while equipped']
+};
+const N36_WEAPON_TARGET_PREFIX='weapon_';
+const N36_ITEMS_FOR_WEALTH={starting:'Starting class choice',purchase:'Purchase / trade',reward:'Loot or reward',crafted:'Crafting / commission',gm:'GM approval'};
+const N36_SCOPE_OK=new Set(['stat_bonus','armor_bonus','max_hp_bonus','move_bonus','damage_bonus','damage_die','tag','resistance']);
+const N36_EFFECT_KIND={
+ stat_bonus:'statNumber',armor_bonus:'number',max_hp_bonus:'number',damage_bonus:'number',move_bonus:'number',bonus_die:'dice',damage_die:'dice',temp_hp:'number',
+ heal_flat:'number',heal_max_half:'none',heal_missing_half:'none',damage_self:'number',condition_mark:'condition',condition_clear:'condition',condition_lock:'condition',condition_unlock:'condition',
+ xp_gain:'number',treasure_gain:'number',advantage:'none',disadvantage:'none',damage_adv:'none',damage_dis:'none',tag:'tag',resistance:'note',resource_restore:'resource',custom:'note'
+};
+for(const [key,info] of Object.entries(N36_WEAPON_EFFECTS)){
+ const x=N36_WEAPON_TARGET_PREFIX+key;
+ if(!NR_EFFECTS[x])NR_EFFECTS[x]=[info[0]+' (selected weapon)',info[2]];
+ if(typeof ND_weaponEffects!=='undefined')ND_weaponEffects.add(x);
+ N36_EFFECT_KIND[x]=info[1];
+}
+const N36_RESETS=[['next-attack','After next attack'],['scene','End of scene'],['camp','Make Camp'],['session','End of session'],['manual','Remove manually']];
+const N36_gearSelect=(name,opts,selected,attr='')=>`<select name="${esc(name)}" id="${esc(name)}" class="input" ${attr}>${opts.map(([v,l])=>`<option value="${esc(String(v))}" ${String(v)===String(selected)?'selected':''}>${esc(String(l))}</option>`).join('')}</select>`;
+const N36_countOptions=(min=1,max=20)=>Array.from({length:max-min+1},(_,i)=>[min+i,String(min+i)]);
+const N36_facesOptions=N36_FACES.map(x=>[x,'d'+x]);
+const N36_statOptions=N36_STATS.map(x=>[x,x]);
+const N36_tagOptions=NC_TAGS.map(x=>[x,x]);
+function N36_diceSelector(prefix,formula='1d6'){
+ const hit=/^(\d+)d(\d+)$/i.exec(String(formula||''));
+ const n=hit?Number(hit[1]):1,faces=hit?Number(hit[2]):6;
+ return `<div class="f2"><div class="formfield"><label>Number of dice</label>${N36_gearSelect(prefix+'-count',N36_countOptions(1,20),n)}</div><div class="formfield"><label>Die size</label>${N36_gearSelect(prefix+'-faces',N36_facesOptions,faces)}</div></div>`;
+}
+function N36_structuredDice(fd,prefix){let n=Number(fd.get(prefix+'-count')),s=Number(fd.get(prefix+'-faces'));if(!Number.isInteger(n)||n<1||n>20||!N36_FACES.includes(s))throw Error('Choose a valid dice count and die size.');return `${n}d${s}`;}
+function N36_diceWithFlat(parts,bonus){if(!parts)return '';let b=Number(bonus)||0;return parts+(b>0?`+${b}`:b<0?String(b):'');}
+function N36_priceLabel(it){const tier=it.wealthTier===0?'0':String(it.wealthTier??'');let a=it.acquisition||'';if(!a){const cat=it.category||'';a=cat.startsWith('Starting')?'starting':cat==='Basic equipment'?'purchase':'gm';}
+ let source=N36_ITEMS_FOR_WEALTH[a]||'GM decides';if(a==='starting'&&it.class)source+=` · ${it.class}`;
+ return {source,cost:tier!==''&&N36_WEALTH.some(([v])=>v===tier)?`Wealth ${N36_WEALTH.find(([v])=>v===tier)[1]}`:'Cost set by GM',tier};}
+function N36_priceSummary(it){const p=N36_priceLabel(it);return `${p.source} · ${p.cost}${it.acquisitionNotes?' · '+String(it.acquisitionNotes):''}`;}
+// Broken gear is always visible and never provides passive effects or attacks.
+const N36_oldCard=NR_itemCard;
+NR_itemCard=function(c,it){let html=N36_oldCard(c,it),price=N36_priceSummary(it);
+ const state=it.broken?'Broken · unusable':'Intact';
+ const effective=N36_effectiveDamage(it),effectiveNotice=effective&&effective!==String(it.damage||'')?`<span class="chip">Effective damage ${esc(effective)}</span>`:'';
+ const stat=N36_attackStatEffects(it).filter(x=>x.type==='attack_stat').at(-1);
+ return html.replace(/<\/h4>/,` <span class="pill ${it.broken?'red':'green'}">${state}</span></h4>`)
+    .replace('<p>'+esc(it.desc||'')+'</p>',`<p>${esc(it.desc||'')}</p><p class="tiny">${esc(price)}</p><div class="chips">${effectiveNotice}${stat?`<span class="chip">Attack uses ${esc(stat.value)}</span>`:''}</div>`);
+};
+const N36_oldCatalogCard=NR_catalogCard;
+NR_catalogCard=function(it){const html=N36_oldCatalogCard(it),info=N36_priceLabel(it);return html.replace('Add +','Grant item').replace('</div></div>',`</div><p class="tiny">${esc(info.source)} · ${esc(info.cost)}</p><div class="actions">${btn('Check price / buy','n36-shop','sm',`data-id="${esc(it.id)}"`)}</div></div>`);};
+function N36_legacyDamagePieces(formula){const m=/^(\d+)d(\d+)([+\-]\d+)?$/.exec(String(formula||''));if(!m||!N36_FACES.includes(Number(m[2]))||Number(m[1])>20||Number(m[1])<1)return null;return {count:Number(m[1]),faces:Number(m[2]),flat:Number(m[3]||0)};}
+const N36_prevDrawEditor=NR_drawEditor;
+NR_drawEditor=function(){N36_prevDrawEditor();const d=NR_editDraft,form=document.getElementById('nr-object-form');if(!d||!form)return;
+ if(d._type==='item')N36_extendItemEditor(form,d);
+ N36_drawEffectDetail();
+};
+function N36_extendItemEditor(form,d){
+ const damageInput=form.querySelector('input[name="damage"]');if(damageInput){let old=d.damage||'',pieces=N36_legacyDamagePieces(old),canPreserve=old&&!pieces;const box=damageInput.closest('.formfield');if(box){box.className='formfield n36-damage-control';box.innerHTML=`<label>Base weapon damage</label><div class="f2"><div class="formfield"><label>Dice count</label>${N36_gearSelect('n36-base-count',[[0,'No damage dice'],...N36_countOptions(1,20)],pieces?.count??(canPreserve?'legacy':0))}</div><div class="formfield"><label>Die size</label>${N36_gearSelect('n36-base-faces',N36_facesOptions,pieces?.faces||6)}</div></div><div class="formfield"><label>Flat modifier to base damage</label><input class="input" name="n36-base-flat" type="number" min="-100" max="100" value="${pieces?.flat||0}"></div>${canPreserve?`<div class="guide tiny">Imported formula: ${esc(old)}. Leave it unchanged or choose new dice.</div>`:''}<input type="hidden" name="damage" id="n36-damage-hidden" value="${esc(old)}">`;if(canPreserve){let count=box.querySelector('#n36-base-count');count.insertAdjacentHTML('afterbegin',`<option value="legacy" selected>Keep existing formula</option>`);}}}
+ const tags=form.querySelector('input[name="tags"]');if(tags){let box=tags.closest('.formfield');let oldTags=Array.isArray(d.tags)?d.tags:String(d.tags||'').split(',').map(x=>x.trim()).filter(Boolean);box.className='formfield';box.innerHTML=`<label>Weapon tags (select any)</label><div class="n36-tags">${[...new Set([...NC_TAGS,...oldTags])].map(t=>`<label class="n36-tag"><input type="checkbox" data-n36-tag="${esc(t)}" ${oldTags.includes(t)?'checked':''}><span>${esc(t)}</span></label>`).join('')}</div><input type="hidden" name="tags" id="n36-tags-hidden" value="${esc(oldTags.join(', '))}">`;}
+ const equipped=form.querySelector('input[name="equipped"]');if(!equipped)return;
+ const box=document.createElement('section');box.className='n36-item-options item';box.innerHTML=`<h3>Equipment state and acquisition</h3><div class="f2"><div class="formfield"><label>Condition</label>${N36_gearSelect('n36-condition',[['intact','Intact — functions normally'],['broken','Broken — disabled']],d.broken?'broken':'intact')}</div><div class="formfield"><label>How it is acquired</label>${N36_gearSelect('n36-acquisition',N36_ACQUIRE,d.acquisition||((d.category||'').startsWith('Starting')?'starting':'purchase'))}</div></div><div class="f2"><div class="formfield"><label>Purchase price / required Wealth</label>${N36_gearSelect('n36-wealth',N36_WEALTH,d.wealthTier??'')}</div><div class="formfield"><label>Acquisition requirements (optional)</label><input class="input" name="n36-acquisition-notes" maxlength="240" value="${esc(d.acquisitionNotes||'')}" placeholder="Quest, merchant, crafting, GM approval"></div></div><p class="tiny">A purchase below your Wealth costs no Treasure; at equal Wealth it costs one Treasure; above Wealth it needs GM approval. Prices not specified in the rules remain GM-set.</p>`;
+ equipped.closest('label')?.after(box);
+ N36_syncBaseDamage();N36_syncTags();
+}
+function N36_syncBaseDamage(){const form=document.getElementById('nr-object-form'),hidden=form?.querySelector('#n36-damage-hidden');if(!hidden)return;let count=form.querySelector('#n36-base-count')?.value||'0',faces=form.querySelector('#n36-base-faces')?.value||'6';if(count==='legacy')return;let n=Number(count),flat=Number(form.querySelector('[name="n36-base-flat"]')?.value||0);hidden.value=n===0?'':N36_diceWithFlat(`${n}d${faces}`,flat);}
+function N36_syncTags(){const hidden=document.querySelector('#n36-tags-hidden');if(hidden)hidden.value=[...document.querySelectorAll('[data-n36-tag]:checked')].map(x=>x.dataset.n36Tag).join(', ');}
+const N36_prevCapture=NR_captureEditor;
+NR_captureEditor=function(){N36_syncBaseDamage();N36_syncTags();N36_prevCapture();const d=NR_editDraft,form=document.getElementById('nr-object-form');if(!d||!form||d._type!=='item')return;
+ const fd=new FormData(form);
+ d.broken=fd.get('n36-condition')==='broken';if(d.broken)d.equipped=false;
+ d.acquisition=String(fd.get('n36-acquisition')||'gm');d.wealthTier=String(fd.get('n36-wealth')??'');d.acquisitionNotes=String(fd.get('n36-acquisition-notes')||'').slice(0,240);
+};
+const N36_prevNormalizeItem=NR_normalizeItem;
+NR_normalizeItem=function(it,first){N36_prevNormalizeItem(it,first);if(it.broken)it.equipped=false;return it;};
+const N36_prevItemUse=NR_useItem;
+NR_useItem=function(id){const it=active()?.items.find(x=>x.id===id);if(it?.broken){banner('Broken equipment cannot be activated. Repair it first.');return;}return N36_prevItemUse(id);};
+function N36_equipActionCheck(e){let b=e.target.closest('[data-action="nr-item-equip"]');if(!b)return;const it=NC_item(active(),b.dataset.id);if(it?.broken){e.preventDefault();e.stopImmediatePropagation();banner('Repair broken equipment before equipping it.');}}
+document.addEventListener('click',N36_equipActionCheck,true);
+// Weapon changes are stored on the item itself. Temporary statuses remain removable.
+function N36_isWeapon(it){return !!it&&(!!it.damage||['Weapon','Signature Weapon'].includes(it.kind));}
+function N36_allMods(it){if(!it)return[];return [...(it.n36WeaponMods||[]),...(it.weaponStatuses||[])].map(s=>{
+ if(s.type==='attack_int')return {...s,type:'attack_stat',value:'INT'};
+ return s;
+ }).filter(s=>s&&N36_WEAPON_EFFECTS[s.type]);}
+function N36_effectiveDamage(it){const repl=N36_allMods(it).filter(x=>x.type==='damage_override').at(-1);return repl?String(repl.value):String(it?.damage||'');}
+function N36_attackStatEffects(it){return N36_allMods(it).filter(x=>x.type==='attack_stat'||x.type==='attack_stat_option');}
+const N36_prevCanAttack=NC_canAttack;
+NC_canAttack=function(c,it){return !!N36_effectiveDamage(it)&&N36_prevCanAttack(c,it);};
+const N36_prevWeaponOpts=NC_weaponOpts;
+NC_weaponOpts=function(c){return N36_prevWeaponOpts(c).map(o=>{const it=NC_item(c,o.value);if(!it)return o;const actual=N36_effectiveDamage(it);return {...o,label:`${it.name} · ${actual||'No damage dice'} · ${NC_labelTag(it)}${it.broken?' · BROKEN':''}`,disabled:!NC_canAttack(c,it)};});};
+
+const N36_oldTags=NC_tags;
+NC_tags=function(it){let tags=N36_oldTags(it);for(const s of N36_allMods(it)){
+ if(s.type==='tag'&&!tags.includes(s.value))tags.push(s.value);
+ if(s.type==='remove_tag')tags=tags.filter(x=>x!==s.value);
+ }return tags;};
+const N36_prevStatChoices=NC_statChoices;
+NC_statChoices=function(c,it){let defaultOptions=N36_prevStatChoices(c,it),extra=N36_attackStatEffects(it);let force=extra.filter(x=>x.type==='attack_stat').at(-1);
+ if(force&&N36_STATS.includes(force.value))defaultOptions=[force.value];
+ for(const s of extra)if(s.type==='attack_stat_option'&&N36_STATS.includes(s.value)&&!defaultOptions.includes(s.value))defaultOptions.push(s.value);
+ return defaultOptions;};
+function N36_passiveMods(c){let effects=[];for(const it of c.items||[]){if(!it.equipped||it.broken)continue;for(const mod of N36_allMods(it)){
+ if(['stat_bonus','armor_bonus','max_hp_bonus','move_bonus'].includes(mod.type))effects.push({...mod,origin:`${it.name}: ${mod.name||N36_WEAPON_EFFECTS[mod.type][0]}`});
+ }}return effects;}
+const N36_previousCalc=NR_calc;
+NR_calc=function(c){const result=N36_previousCalc(c);for(const e of N36_passiveMods(c)){
+ let v=Number(e.value)||0;
+ if(e.type==='stat_bonus'&&N36_STATS.includes(e.stat))result.stats[e.stat]+=v;
+ if(e.type==='armor_bonus')result.armor=Math.max(0,result.armor+v);
+ if(e.type==='max_hp_bonus')result.hpBonus+=v;
+ if(e.type==='move_bonus')result.moveBonus+=v;
+ }
+ // Armor STR requirements use the effective attribute, including equipped bonuses.
+ const baseStrength=Number(c.stats?.STR)||0,modifiedStrength=Number(result.stats.STR)||0;
+ if(modifiedStrength>baseStrength&&!(typeof ND_raging==='function'&&ND_raging(c))){
+  for(const item of c.items||[]){const required=Number(item.strength)||0;
+   if(item.equipped&&!item.broken&&Number(item.armor)>0&&required>baseStrength&&required<=modifiedStrength)result.armor+=Number(item.armor)||0;
+  }
+ }
+ return result;};
+const N36_previousDetails=NC_modifierDetails;
+NC_modifierDetails=function(c,stat,mode,moveName){const out=N36_previousDetails(c,stat,mode,moveName),it=NC_item(c,NC_action?.weaponId);
+ if(moveName==='Trade Blows'&&it){const mods=N36_allMods(it),bonuses=mods.filter(x=>x.type==='attack_bonus');for(const x of bonuses){const amount=Number(x.value)||0;out.reasons.push({label:`${it.name} · ${x.name||'Attack bonus'}`,value:amount});out.bonus+=amount;}
+ let plus=(out.mode==='adv'?1:0)+mods.filter(x=>x.type==='attack_adv').length;
+ let minus=(out.mode==='dis'?1:0)+mods.filter(x=>x.type==='attack_dis').length;
+ if(mods.some(x=>x.type==='attack_adv'))out.how.push(`${it.name}: attack advantage`);
+ if(mods.some(x=>x.type==='attack_dis'))out.how.push(`${it.name}: attack disadvantage`);
+ if(plus>0&&minus>0)out.how.push('Attack advantage and disadvantage cancel');
+ out.mode=plus>minus?'adv':minus>plus?'dis':'normal';
+ const override=N36_attackStatEffects(it).filter(x=>x.type==='attack_stat').at(-1);
+ if(override)out.how.push(`${it.name}: attacks use ${override.value} (${override.name||'weapon effect'})`);
+ for(const b of N36_passiveMods(c))if(['stat_bonus','move_bonus'].includes(b.type))out.how.push(`${b.origin}: ${b.type==='stat_bonus'?b.stat+' ':''}${fmt(Number(b.value)||0)}`);
+ if(NC_action?.n36GMStat)out.how.push(`GM-approved one-attack attribute: ${stat}`);
+ }
+ return out;};
+const N36_previousSetup=NC_showSetup;
+NC_showSetup=function(){N36_previousSetup();const c=active(),a=NC_action,form=document.getElementById('nc-attack-setup');if(!c||!a||!form)return;
+ const original=NC_item(c,a.weaponId),statCtl=form.querySelector('#nc-stat');if(!original||!statCtl)return;
+ const current=N36_attackStatEffects(original).filter(x=>x.type==='attack_stat').at(-1);
+ const note=document.createElement('p');note.className='tiny';const eff=N36_effectiveDamage(original);note.textContent=(eff&&eff!==String(original.damage||'')?`Effective weapon damage ${eff} (base ${original.damage}). `:'')+(current?`Weapon effect: attacks with this weapon use ${current.value}.`:'Available attributes follow weapon tags and effects.');
+ statCtl.closest('.formfield')?.after(note);
+ const actions=form.querySelector('.actions');if(actions){const extra=document.createElement('div');extra.className='n36-stat-override';extra.innerHTML=`<label class="option"><input type="checkbox" id="n36-gm-stat-enabled" ${a.n36GMStat?'checked':''}><span>Use another attack attribute (GM-approved exception)</span></label><div class="formfield" id="n36-gm-stat-wrap" style="${a.n36GMStat?'':'display:none'}"><label>GM-approved attribute for this Trade Blows roll</label>${N36_gearSelect('n36-gm-stat',N36_statOptions,a.n36GMStat||a.stat)}</div>`;actions.before(extra);}
+};
+const N36_previousReadSetup=NC_readSetup;
+NC_readSetup=function(){if(!N36_previousReadSetup())return false;const a=NC_action,form=document.getElementById('nc-attack-setup');const custom=form?.querySelector('#n36-gm-stat-enabled')?.checked;
+ a.n36GMStat=custom?String(form.querySelector('#n36-gm-stat')?.value||''):'';
+ if(custom){if(!N36_STATS.includes(a.n36GMStat)){banner('Choose a valid attribute.');return false;}a.stat=a.n36GMStat;}
+ return true;};
+function N36_rollAdvantage(c,it){const mods=N36_allMods(it);const original=NC_action?.n36OriginalDamageAdv??c.nextDamage?.adv??0;
+ const plus=(original>0?1:0)+mods.filter(x=>x.type==='damage_adv').length+(NC_action?.holy?1:0)+(/damage advantage/i.test(it?.desc||'')?1:0);
+ const minus=(original<0?1:0)+mods.filter(x=>x.type==='damage_dis').length;
+ return plus>minus?1:minus>plus?-1:0;
+}
+NC_singleWeaponDamage=function(c,it,mode){let mods=N36_allMods(it),formula=N36_effectiveDamage(it)||'1d4';const extras=mods.filter(x=>x.type==='damage_die').map(x=>String(x.value));
+ const full=formula+(extras.length?'+'+extras.join('+'):'');const adv=N36_rollAdvantage(c,it);
+ const rolled=mode==='roll'?NR_rollExpr(full,adv):{total:NC_damageExtremum(full,mode),detail:`${mode==='max'?'Maximum':'Minimum'} ${full}`};
+ const flat=mods.filter(x=>x.type==='damage_flat').reduce((sum,x)=>sum+(Number(x.value)||0),0);
+ const source=mods.filter(x=>['damage_override','damage_flat','damage_die','damage_adv','damage_dis'].includes(x.type)).map(x=>`${x.name||N36_WEAPON_EFFECTS[x.type][0]}: ${x.value??x.type}`).join('; ');
+ return{it,base:formula,dice:rolled,flat,total:rolled.total+flat,detail:`${it.name}: ${rolled.detail}${flat?' '+fmt(flat):''}${source?' · '+source:''}`};
+};
+const N36_previousDamageGo=NC_damageGo;
+NC_damageGo=function(){const c=active(),a=NC_action;if(!a||!c)return;const last=c.rollHistory?.[0]?.id;
+ a.n36OriginalDamageAdv=Number(c.nextDamage?.adv)||0;
+ N36_previousDamageGo();
+ if(c.rollHistory?.[0]?.id!==last){const r=c.rollHistory[0],it=NC_item(c,a.weaponId);if(r&&it){r.breakdown??=[];
+ for(const x of N36_allMods(it))if(['damage_flat','damage_die','damage_override','damage_adv','damage_dis'].includes(x.type))r.breakdown.push(`${it.name} — ${x.name||N36_WEAPON_EFFECTS[x.type][0]}: ${x.value??x.type}`);
+ save();}}
+};
+// Inventory’s separate damage button obeys the same weapon-specific mechanics.
+NR_rollDamage=function(c,it){if(!it||it.broken){banner('A broken weapon cannot roll normal damage.');return;}try{
+ const attack=NC_singleWeaponDamage(c,it,'roll'),calc=NR_calc(c);let extra=0,breakdown=[attack.detail];
+ for(const formula of calc.damageDice){const r=NR_rollExpr(formula);extra+=r.total;breakdown.push(r.detail);}
+ if(c.nextDamage?.die){const r=NR_rollExpr(c.nextDamage.die);extra+=r.total;breakdown.push(r.detail);}
+ const bonus=(Number(calc.damBonus)||0)+(Number(c.nextDamage?.flat)||0);
+ const total=Math.max(0,attack.total+bonus+extra);
+ c.nextDamage={adv:0,flat:0,die:''};c.rollHistory??=[];
+ c.rollHistory.unshift({id:uid(),name:`Damage · ${it.name}`,total,grade:'Damage',when:new Date().toISOString(),dice:[attack.detail],stat:'Damage',bonus:bonus+extra,mode:'damage',breakdown:[...breakdown,`General damage bonus: ${fmt(bonus)}`,`Extra dice: ${extra}`]});c.rollHistory=c.rollHistory.slice(0,120);
+ save();openModal('Weapon damage',`<div class="rollresult"><strong>${total}</strong><b>${esc(it.name)}</b></div><p>${esc(breakdown.join(' · '))}</p><p class="tiny">${NC_hasTag(it,'#piercing')?'#piercing bypasses armor.':'Armor reduces incoming damage.'} Apply to the target when appropriate.</p>${btn('Done','modal-close','quiet')}`);
+ }catch(e){banner('Damage formula error: '+e.message);}
+};
+function N36_valueControl(kind,prefix='n36-mod'){
+ if(kind==='stat')return `<div class="formfield"><label>Attribute used</label>${N36_gearSelect(prefix+'-stat',N36_statOptions,'INT')}</div>`;
+ if(kind==='statNumber')return `<div class="f2"><div class="formfield"><label>Attribute affected</label>${N36_gearSelect(prefix+'-stat',N36_statOptions,'STR')}</div><div class="formfield"><label>Bonus / penalty</label><input class="input" name="${prefix}-number" id="${prefix}-number" type="number" min="-100" max="100" value="1"></div></div>`;
+ if(kind==='number')return `<div class="formfield"><label>Bonus / penalty</label><input class="input" name="${prefix}-number" id="${prefix}-number" type="number" min="-100" max="100" value="1"></div>`;
+ if(kind==='dice')return N36_diceSelector(prefix,'1d6');
+ if(kind==='tag')return `<div class="formfield"><label>Weapon tag</label>${N36_gearSelect(prefix+'-tag',N36_tagOptions,'#piercing')}</div>`;
+ if(kind==='condition')return `<div class="formfield"><label>Condition</label>${N36_gearSelect(prefix+'-condition',[['','Choose first available'],...NR_COND.map(x=>[x,x])],'')}</div>`;
+ if(kind==='resource'){const c=active();return `<div class="formfield"><label>Resource to recover</label>${N36_gearSelect(prefix+'-resource',Object.values(c?.resources||{}).map(x=>[x.name,x.name]),Object.values(c?.resources||{})[0]?.name||'')}</div>`;}
+ if(kind==='note')return `<p class="tiny">This effect is narrative: the GM determines the outcome. Describe restrictions in the note below.</p>`;
+ return '<p class="tiny">This effect applies without a numeric value.</p>';
+}
+function N36_getEffectValue(fd,prefix,kind){let stat='',value='';
+ if(kind==='dice')value=N36_structuredDice(fd,prefix);
+ else if(kind==='stat'||kind==='statNumber'){
+  stat=String(fd.get(prefix+'-stat')||'');if(!N36_STATS.includes(stat))throw Error('Select one of the five attributes.');value=kind==='stat'?stat:N36_getEffectValue(fd,prefix,'number').value;
+ }else if(kind==='number'){
+  let n=Number(fd.get(prefix+'-number'));if(!Number.isInteger(n)||n< -100||n>100)throw Error('Enter an integer between -100 and 100.');value=n;
+ }else if(kind==='tag'){
+  value=String(fd.get(prefix+'-tag')||'');if(!NC_TAGS.includes(value))throw Error('Choose one of the listed weapon tags.');
+ }else if(kind==='condition'){
+  stat=String(fd.get(prefix+'-condition')||'');if(stat&&!NR_COND.includes(stat))throw Error('Choose a known Condition.');
+ }else if(kind==='resource'){
+  value=String(fd.get(prefix+'-resource')||'');if(!Object.values(active()?.resources||{}).some(x=>x.name===value))throw Error('Select a tracked resource.');
+ }
+ return {value,stat};
+}
+function N36_modText(m){let kind=N36_WEAPON_EFFECTS[m.type]?.[0]||m.type;let value=m.value??'';
+ if(m.type==='stat_bonus')value=`${m.stat}: ${fmt(Number(value)||0)}`;
+ if(typeof value==='number')value=fmt(value);
+ return `${m.name||kind} · ${kind}${value!==''?' · '+value:''}`;
+}
+function N36_statusPage(id){const c=active(),it=NC_item(c,id);if(!it)return;let weapon=N36_isWeapon(it),broken=!!it.broken;
+ const all=[...(it.n36WeaponMods||[]).map(x=>({...x,permanent:true})),...(it.weaponStatuses||[]).map(x=>({...x,permanent:false}))];
+ const entries=all.map(x=>`<div class="row" style="padding:8px 0;border-bottom:1px solid var(--border,#6663);gap:8px;flex-wrap:wrap"><div style="flex:1;min-width:150px"><strong class="small">${esc(N36_modText(x))}</strong><p class="tiny">${x.permanent?'Permanent property':(NC_durationLabels[x.duration]||x.duration||'Until removed')}</p></div>${btn('Remove','n36-mod-remove','sm danger',`data-id="${esc(id)}" data-mod="${esc(x.id)}"`)}</div>`).join('');
+ const wForm=weapon?`<form data-n36-form="weapon" class="stack"><input type="hidden" name="itemId" value="${esc(id)}"><h3>Add mechanical property</h3><div class="f2"><div class="formfield"><label>What changes?</label>${N36_gearSelect('n36-mod-kind',Object.entries(N36_WEAPON_EFFECTS).map(([k,info])=>[k,info[0]]),'attack_stat')}</div><div class="formfield"><label>Modification permanence</label>${N36_gearSelect('n36-mod-permanence',[['temporary','Temporary status'],['permanent','Permanent weapon property']],'temporary')}</div></div><div id="n36-mod-value"></div><div class="f2"><div class="formfield"><label>Remove automatically</label>${N36_gearSelect('n36-mod-duration',N36_RESETS,'scene')}</div><div class="formfield"><label>Bonus source / name</label><input class="input" name="n36-mod-source" maxlength="120" value="Enchantment"></div></div><p class="tiny">Bonuses are stored on this weapon and applied to its attacks and damage. Armor, attribute, and general Move bonuses require the weapon to be equipped and intact.</p><button class="btn primary" type="submit">Apply to this weapon</button></form>`:'';
+ openModal(`Equipment · ${it.name}`,`<div class="stack"><div class="row"><div><strong>${esc(it.name)}</strong><p class="tiny">${esc(N36_priceSummary(it))}</p></div><span class="pill ${broken?'red':'green'}">${broken?'Broken':'Intact'}</span></div><div class="formfield"><label>Equipment condition</label>${N36_gearSelect('n36-gear-condition',[['intact','Intact / working'],['broken','Broken / not usable']],broken?'broken':'intact',`data-id="${esc(id)}"`)}</div><p class="tiny">Base damage: ${esc(it.damage||'None')} · Effective damage: ${esc(N36_effectiveDamage(it)||'None')} · ${esc(NC_labelTag(it))}</p>${NC_hasTag(it,'#reload')?`<div class="actions">${btn(it.needsReload?'Reload this weapon':'Mark weapon unloaded','nc-reload-toggle','sm',`data-id="${esc(id)}"`)}</div>`:''}${wForm}${entries?`<h3>Weapon properties and active statuses</h3>${entries}`:''}<div class="actions">${btn('Edit all equipment properties','nr-item-edit','sm',`data-id="${esc(id)}"`)}${btn('Done','modal-close','quiet')}</div></div>`,true);
+ N36_drawWeaponValue();
+}
+NC_effectEditor=N36_statusPage;
+function N36_drawWeaponValue(){let type=document.getElementById('n36-mod-kind')?.value||'attack_stat',holder=document.getElementById('n36-mod-value');if(!holder)return;
+ holder.innerHTML=N36_valueControl(N36_WEAPON_EFFECTS[type]?.[1]||'none','n36-mod');
+ const perm=document.getElementById('n36-mod-permanence')?.value==='permanent',duration=document.getElementById('n36-mod-duration');
+ if(duration)duration.disabled=perm;
+}
+function N36_addMod(it,data,permanent){if(!it)return;let dst=permanent?'n36WeaponMods':'weaponStatuses';it[dst]??=[];it[dst].push({...data,id:uid(),duration:permanent?'permanent':data.duration});}
+function N36_weaponForm(form){const c=active(),fd=new FormData(form),it=NC_item(c,fd.get('itemId'));
+ if(!it||!N36_isWeapon(it)){banner('Select a valid weapon.');return;}
+ try{const type=String(fd.get('n36-mod-kind')||''),kind=N36_WEAPON_EFFECTS[type]?.[1];if(!kind)throw Error('Choose a supported mechanical property.');
+ const vals=N36_getEffectValue(fd,'n36-mod',kind),permanent=fd.get('n36-mod-permanence')==='permanent',duration=String(fd.get('n36-mod-duration')||'scene');
+ if(!permanent&&!N36_RESETS.some(([x])=>x===duration))throw Error('Select a valid duration.');
+ const name=String(fd.get('n36-mod-source')||N36_WEAPON_EFFECTS[type][0]).slice(0,120);
+ N36_addMod(it,{type,...vals,name,duration},permanent);save();N36_statusPage(it.id);banner('Weapon property applied.');
+ }catch(e){banner(e.message);}
+}
+function N36_removeMod(id,modId){let it=NC_item(active(),id);if(!it)return;let prev=(it.n36WeaponMods||[]).length+(it.weaponStatuses||[]).length;
+ it.n36WeaponMods=(it.n36WeaponMods||[]).filter(x=>x.id!==modId);it.weaponStatuses=(it.weaponStatuses||[]).filter(x=>x.id!==modId);
+ const c=active();if(c)c.hp=Math.min(c.hp,maxHP(c));
+ if(prev===(it.n36WeaponMods.length+it.weaponStatuses.length)){banner('The property no longer exists.');return;}
+ save();N36_statusPage(id);banner('Property removed.');}
+// Reuse the same validated effects on spells, moves, and regular item builders.
+NR_effectBuilderBox=function(){const choices=Object.entries(NR_EFFECTS).filter(([k])=>!['weapon_damage_flat','weapon_damage_die','weapon_tag','weapon_attack_stat','weapon_break','weapon_repair'].includes(k));
+ return `<section class="nr-effectbuilder"><h4>Mechanical effect builder</h4><div class="f2"><div class="formfield"><label>Effect</label>${N36_gearSelect('nr-effect-type',choices.map(([k,v])=>[k,v[0]]),'stat_bonus')}</div><div class="formfield"><label>Trigger</label>${N36_gearSelect('nr-effect-scope',[['activate','When activated / cast'],['passive','While equipped / active']],'activate')}</div></div><div id="n36-effect-values" style="margin-top:9px"></div><div class="f2"><div class="formfield"><label>Duration</label>${N36_gearSelect('nr-effect-duration',[['instant','Instant'],['equipped','While equipped (passive)'],['next-roll','Next roll'],['next-attack','Next weapon attack'],['scene','Until scene ends'],['camp','Until Make Camp'],['session','Until session ends'],['manual','Until removed'],['permanent','Permanent (GM-approved)']],'instant')}</div><div class="formfield"><label>Source / restriction (optional)</label><input class="input" name="nr-effect-note" id="nr-effect-note" maxlength="240" placeholder="Why the effect applies"></div></div><div class="actions">${btn('+ Add effect','nr-effect-add','sm primary')}</div><p class="tiny">Choose the attribute, dice, tag, or numeric bonus explicitly. Narrative-only effects are labeled for GM rulings. Weapon-targeted effects prompt for their target on activation.</p></section>`;};
+function N36_drawEffectDetail(){const type=document.getElementById('nr-effect-type')?.value||'stat_bonus',holder=document.getElementById('n36-effect-values');if(!holder)return;
+ holder.innerHTML=N36_valueControl(N36_EFFECT_KIND[type]||'none','n36-effect');
+ const scope=document.getElementById('nr-effect-scope'),duration=document.getElementById('nr-effect-duration');
+ const isItem=NR_editDraft?._type==='item';
+ if(scope&&!isItem){scope.value='activate';scope.disabled=true;}
+ if(scope?.value==='passive'&&duration){duration.value='equipped';duration.disabled=true;}
+ else if(duration){duration.disabled=false;}
+ if(scope?.value!=='passive'&&['stat_bonus','armor_bonus','max_hp_bonus','tag','resistance'].includes(type)&&duration&&['instant','next-roll'].includes(duration.value))duration.value='scene';
+ if(type.startsWith('weapon_')){if(scope){scope.value='activate';scope.disabled=true;}if(duration){duration.disabled=false;if(['instant','next-roll','equipped'].includes(duration.value))duration.value='scene';}}
+ else if(scope&&isItem)scope.disabled=false;
+}
+NR_addEffect=function(){const draft=NR_editDraft;if(!draft)return;NR_captureEditor();const type=document.getElementById('nr-effect-type')?.value||'',kind=N36_EFFECT_KIND[type];if(!kind){banner('Choose a supported effect type.');return;}
+ try{const form=document.getElementById('nr-object-form'),fd=new FormData(form),weapon=type.startsWith('weapon_'),scope=weapon?'activate':(draft._type==='item'?String(fd.get('nr-effect-scope')||'activate'):'activate'),duration=scope==='passive'?'equipped':String(fd.get('nr-effect-duration')||'instant');
+ if(scope==='passive'&&!N36_SCOPE_OK.has(type))throw Error('This effect must trigger on activation, not passively.');
+ const e=N36_getEffectValue(fd,'n36-effect',kind);
+ const desc=String(fd.get('nr-effect-note')||'').slice(0,240);
+ draft.effects??=[];draft.effects.push({id:uid(),type,scope,duration,value:e.value,stat:e.stat,description:desc});NR_drawEditor();banner('Mechanical effect added.');
+ }catch(e){banner(e.message);}
+};
+// Applied weapon-targeted effects also enter the same mechanical pipeline.
+const N36_prevEffectApply=NR_effectApply;
+NR_effectApply=function(c,e,origin='Effect'){
+ if(e.scope==='activate'&&['instant','next-roll'].includes(e.duration)){
+  if(e.type==='move_bonus'){c.nextMove??={adv:0,flat:0,die:''};c.nextMove.flat=(Number(c.nextMove.flat)||0)+(Number(e.value)||0);return `${origin}: Move bonus queued`; }
+  if(e.type==='damage_bonus'){c.nextDamage??={adv:0,flat:0,die:''};c.nextDamage.flat=(Number(c.nextDamage.flat)||0)+(Number(e.value)||0);return `${origin}: damage bonus queued`; }
+  if(e.type==='damage_die'){c.nextDamage??={adv:0,flat:0,die:''};c.nextDamage.die=[c.nextDamage.die,String(e.value||'')].filter(Boolean).join('+');return `${origin}: damage dice queued`; }
+ }
+ if(!String(e.type||'').startsWith('weapon_'))return N36_prevEffectApply(c,e,origin);
+ const it=NC_item(c,ND_effectWeaponId);if(!it)return 'Select the equipment target first.';
+ const map={weapon_damage_flat:'damage_flat',weapon_damage_die:'damage_die',weapon_tag:'tag',weapon_attack_stat:'attack_stat'};
+ if(e.type==='weapon_break'){if(!ND_canBreak(it))return `${it.name} resists breaking`;it.broken=true;it.equipped=false;return `${it.name} broken`;}
+ if(e.type==='weapon_repair'){it.broken=false;return `${it.name} repaired`;}
+ const type=map[e.type]||String(e.type).slice(7);
+ if(!N36_WEAPON_EFFECTS[type])return 'Unknown weapon effect';
+ const data={name:origin,type,value:e.value,stat:e.stat,duration:e.duration};
+ if(type==='attack_stat'&&!N36_STATS.includes(data.value))data.value='INT';
+ if(type==='damage_die'||type==='damage_override'){
+  if(!/^\d{1,2}d\d{1,3}$/.test(String(data.value)))return 'Invalid damage dice';
+ }
+ N36_addMod(it,data,e.duration==='permanent');return `${it.name}: ${N36_WEAPON_EFFECTS[type][0]}`;
+};
+const N36_priorUseItem=NR_useItem;
+NR_useItem=function(id){const c=active(),it=NC_item(c,id);if(it?.broken){banner('Broken equipment cannot be activated.');return;}if(it?.effects?.some(e=>String(e.type||'').startsWith('weapon_'))){ND_pickWeaponFor(it.name,'item:'+id,()=>N36_priorUseItem(id));return;}return N36_priorUseItem(id);};
+// Wealth information is available on each template. Unspecified prices remain GM-set.
+function N36_openShop(id){const c=active(),item=[...NR_CATALOG,...NR_customCatalog].find(x=>x.id===id);if(!c||!item)return;
+ const wealth=NR_treasureTier(c),price=N36_priceLabel(item),special=['Magic item','Artifact'].includes(item.category)||price.source.startsWith('GM approval');
+ openModal(`Acquire · ${item.name}`,`<form class="stack" data-n36-form="purchase"><input type="hidden" name="template" value="${esc(item.id)}"><div class="guide"><strong>${esc(item.name)}</strong><p>${esc(price.source)}. ${esc(price.cost)}.</p><p>Your Wealth: <b>${esc(wealth.name)}</b>, Treasure: <b>${c.treasure||0}</b>.</p></div><div class="formfield"><label>Agreed purchase Wealth tier</label>${N36_gearSelect('n36-shop-tier',N36_WEALTH,price.tier)}</div><p class="tiny">Below your Wealth: no Treasure spent. Equal Wealth: one Treasure. Above your Wealth: normally unaffordable; requires an explicit GM override.</p><label class="option"><input type="checkbox" name="gmApproval" ${special?'':'checked'}><span>GM has approved this acquisition${special?' (special item)':''}</span></label><label class="option"><input type="checkbox" name="override"><span>GM approved buying above the normal Wealth limit</span></label><div class="actions"><button type="submit" class="btn primary">Confirm purchase</button>${btn('Cancel','modal-close','quiet')}</div></form>`,true);
+}
+function N36_buyItem(form){const c=active(),fd=new FormData(form),id=String(fd.get('template')||''),template=[...NR_CATALOG,...NR_customCatalog].find(x=>x.id===id);if(!c||!template){banner('The item is unavailable.');return;}
+ let tier=String(fd.get('n36-shop-tier')??'');if(!N36_WEALTH.some(([x])=>x===tier)||tier===''){banner('Ask the GM to set an acquisition price before purchasing.');return;}
+ const special=['Magic item','Artifact'].includes(template.category)||N36_priceLabel(template).source.startsWith('GM approval');
+ if((special||!fd.has('gmApproval'))&&!fd.has('gmApproval')){banner('This acquisition requires GM approval.');return;}
+ const wealth=NR_treasureTier(c),tierNum=Number(tier);
+ if(tierNum>wealth.tier&&!fd.has('override')){banner('This purchase is above your Wealth. Obtain GM approval or choose a different item.');return;}
+ if(tierNum===wealth.tier&&(Number(c.treasure)||0)<1){banner('A purchase at your Wealth tier requires one Treasure.');return;}
+ const cost=tierNum===wealth.tier?1:0;
+ const item=NR_normalizeItem({...deep(template),id:uid(),desc:template.description||template.desc||'',uses:template.uses||0,spent:0,equipped:false,quantity:1,reset:template.reset||'never',effects:deep(template.effects||[]),wealthTier:tier,acquisition:'purchase',acquisitionNotes:'Bought with '+(cost?'one Treasure':'no Treasure')+(tierNum>wealth.tier?' (GM exception)':'')},false);
+ c.treasure=Math.max(0,(Number(c.treasure)||0)-cost);c.items.push(item);
+ closeModal();save();render();banner(`${item.name} purchased${cost?' · 1 Treasure spent':''}.`);
+}
+// Interaction layer: dropdown choices update the actual saved values and mechanics.
+document.addEventListener('change',e=>{const t=e.target;
+ if(['n36-base-count','n36-base-faces'].includes(t.id)||t.name==='n36-base-flat')N36_syncBaseDamage();
+ if(t.hasAttribute('data-n36-tag'))N36_syncTags();
+ if(t.id==='n36-mod-kind')N36_drawWeaponValue();
+ if(t.id==='n36-mod-permanence'){const d=document.getElementById('n36-mod-duration');if(d)d.disabled=t.value==='permanent';}
+ if(t.id==='nr-effect-type')N36_drawEffectDetail();
+ if(t.id==='nr-effect-scope'){
+  const duration=document.getElementById('nr-effect-duration');if(duration){duration.disabled=t.value==='passive';if(t.value==='passive')duration.value='equipped';else if(duration.value==='equipped')duration.value='scene';}
+ }
+
+ if(t.id==='n36-gm-stat-enabled'){let wrap=document.getElementById('n36-gm-stat-wrap');if(wrap)wrap.style.display=t.checked?'':'none';}
+ if(t.id==='n36-gear-condition'){const it=NC_item(active(),t.dataset.id);if(!it)return;
+  if(t.value==='broken'&&!ND_canBreak(it)){t.value='intact';banner('This equipment cannot ordinarily be broken.');return;}
+  it.broken=t.value==='broken';if(it.broken)it.equipped=false;const c=active();if(c)c.hp=Math.min(c.hp,maxHP(c));
+  save();N36_statusPage(it.id);banner(it.broken?'Equipment marked broken.':'Equipment repaired.');
+ }
+},true);
+document.addEventListener('submit',e=>{const form=e.target.closest('[data-n36-form]');if(!form)return;e.preventDefault();e.stopImmediatePropagation();
+ if(form.dataset.n36Form==='weapon')N36_weaponForm(form);
+ if(form.dataset.n36Form==='purchase')N36_buyItem(form);
+},true);
+document.addEventListener('click',e=>{const b=e.target.closest('[data-action^="n36-"]');if(!b)return;e.preventDefault();e.stopImmediatePropagation();
+ if(b.dataset.action==='n36-mod-remove')N36_removeMod(b.dataset.id,b.dataset.mod);
+ if(b.dataset.action==='n36-shop')N36_openShop(b.dataset.id);
+},true);
+// Restore all screens to the same compact, tap-friendly control language.
+if(!document.getElementById('n36-design')){
+ const el=document.createElement('style');el.id='n36-design';el.textContent=`
+ .n36-tags{display:flex;flex-wrap:wrap;gap:7px;padding:6px 0}.n36-tag{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line,#7775);border-radius:10px;padding:6px 9px;min-height:35px;cursor:pointer;font-size:.85rem}
+ .n36-tag input{accent-color:var(--accent,#8a6be7);width:16px;height:16px}.n36-item-options{padding:14px!important;display:grid;gap:10px}
+ .n36-damage-control>.f2{margin:5px 0}.n36-stat-override{padding:8px 12px;border:1px solid var(--line,#7775);border-radius:10px}.n36-stat-override .formfield{margin-top:7px}
+ #n36-mod-value,#n36-effect-values{padding:8px 0}.n36-damage-control input[type=number],#n36-mod-value input[type=number]{max-width:100%}
+ @media(max-width:420px){.n36-damage-control .f2,.n36-item-options .f2{grid-template-columns:1fr}.n36-tag{flex:1 0 auto;justify-content:center}}
+ `;document.head.appendChild(el);
+}
 </script><script>if('serviceWorker' in navigator&&location.protocol==='https:'){navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).catch(()=>{})}</script></body></html>
